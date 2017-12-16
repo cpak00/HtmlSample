@@ -1,0 +1,33 @@
+{%extends "index.htm"%}
+
+{%block head%}
+{{super()}}
+<script src="./static/js/home.js"></script>
+<title>智能家居</title>
+{%endblock%}
+
+{%block mheader%}
+{{super()}}
+{%endblock%}
+
+{%block main%}
+<div id="main">
+    <verticalNav>
+        <ul>
+            <li><a onclick="lampControl()"><img src="./static/css/img/bumb.png">灯具管理</a></li>
+            <li><a onclick="householdControl()"><img src="./static/css/img/air.png">电器控制</a></li>
+            <li><a onclick="temprature()"><img src="./static/css/img/tmp.png">温度湿度</a></li>
+        </ul>
+    </verticalNav>
+    <div id="mainBar">
+
+    </div>
+</div>
+{%endblock%}
+
+{%block bottom%}
+{{super()}}
+{%endblock%}
+
+
+</html>

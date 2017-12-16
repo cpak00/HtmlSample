@@ -1,0 +1,203 @@
+<style>
+
+#header{}
+.parent{
+	min-width: 800px;
+	_width: 800px;
+	position: relative;
+	height:15%;
+	width: 100%;
+	background-color:black;
+	background-image: url('img/title.jpg');
+	background-position: 45%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color:white;
+	overflow:hidden;
+	clear: both;
+}
+.title{
+	font-size:2em;
+	text-align:left;
+	position: absolute;
+	left:3%;
+}
+.login{
+	color:white;
+	font-size:1em;
+	position: absolute;
+	right:3%;
+	vertical-align: center;
+}
+.logout{
+	color:white;
+	font-size:1em;
+	position: absolute;
+	right:3%;
+	vertical-align: center;
+}
+.loginbutton{
+	background-color:rgba(ee, ee, ee, 0.3);
+	color:white;
+	border-width: 0;
+	font-size:1em;
+	min-width: 100px;
+}
+.logoutbutton{
+	background-color:rgba(ee, ee, ee, 0.3);
+	color:white;
+	border-width: 0;
+	font-size:1em;
+	min-width: 100px;
+}
+.loginbutton:link, :visited{
+	display: block;
+	width: 120px;
+	font-weight: bold;
+	color:white;
+	background-color:#BEBEBE;
+	text-align: center;
+	padding:4px;
+	text-decoration: none;
+}
+.loginbutton:hover, :active{
+	background-color:#cc0000;
+}
+.logoutbutton:link, :visited{
+	display: block;
+	width: 120px;
+	font-weight: bold;
+	color:white;
+	background-color:#BEBEBE;
+	text-align: center;
+	padding:4px;
+	text-decoration: none;
+}
+.logoutbutton:hover, :active{
+	background-color:#cc0000;
+	font-weight: bold;
+}
+
+horrizenNav{
+	position: absolute;
+	bottom:0;
+}
+
+horrizenNav ul
+{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+horrizenNav li
+{
+	float: left;
+}
+horrizenNav a:link,horrizenNav a:visited{
+	display: block;
+	width: 120px;
+	font-weight: bold;
+	color:white;
+	background-color:#BEBEBE;
+	text-align: center;
+	padding:4px;
+	text-decoration: none;
+}
+horrizenNav a:hover,horrizenNav a:active{
+	background-color:rgba(0, 7, 204, 0.43);
+}
+
+verticalNav{
+	background-color: #8D97A1;
+	float: left;
+	left: 0;
+	width: 200px;
+	height: 100%;
+}
+verticalNav img{
+	height: 25px;
+	position: relative;
+	right: 10px;
+	top: 8px;
+}
+verticalNav ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow: hidden;
+}
+verticalNav li{
+	width: 200px;
+	float: left;
+}
+verticalNav a,verticalNav a:link,verticalNav a:visited{
+	cursor: pointer;
+	height: 50px;
+	display: block;
+	color: white;
+	background-color: #94A2AF;
+	text-align: right;
+	text-decoration: none;
+}
+verticalNav a:hover,verticalNav a:active{
+	color: white;
+	background-color: #FD5951;
+	font-weight: bold;
+}
+verticalNav a:hover img,verticalNav a:active img{
+	width: 35px;
+	height: auto;
+}
+
+#main{
+	background-color:#EEEEEE;
+	color:black;
+	height:80%;
+}
+#mainbar{
+	position: relative;
+	left: 5%;
+	overflow: hidden;
+}
+#bottom{
+	min_width: 300px;
+	_width: 300px;
+	position:absolute;
+	bottom:0;
+	_height:10px;
+	min_height:10px;
+	height:10%;
+	width:100%;
+	background-color:lightblue;
+	background-size: 100%;
+	color:white;
+	text-align:center;
+}
+.lumpControl{
+	text-align: center;
+}
+.lumpControl button, .lumpControl button:link, .lumpControl button:visited{
+	display: block;
+	width: 120px;
+	font-weight: bold;
+	color:gray;
+	background-color:#BEBEBE;
+	text-align: center;
+	padding:4px;
+	text-decoration: none;
+}
+.lumpControl button:hover{
+	color:gray;
+	background-color: white;
+}
+
+p.down{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom:3px;
+}
+
+
+</style>

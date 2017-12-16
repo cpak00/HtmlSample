@@ -1,0 +1,98 @@
+<html>
+
+{%block head%}
+<head>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" href="./static/css/sample.css" type="text/css">
+<script>
+	function logout(){
+		var a = confirm("确认退出?");
+		if (a){		
+			window.location.href = '/logout';
+		}
+
+	}
+	function info(){
+   		var mainBar = document.getElementById("mainBar");
+    	mainBar.innerHTML = "<h2>物联信息</h2>支持服务: 智能家居, 机械狗, 物联车</p>"
+	}
+	function help(){
+    	var mainBar = document.getElementById("mainBar");
+    	mainBar.innerHTML = "<h2>帮助</h2>"
+	}
+	function env(){
+    	var mainBar = document.getElementById("mainBar");
+    	mainBar.innerHTML = "<h2>开发环境</h2><p>服务端: python flask(0.12.2)</p><p>语言: HTML+CSS+JS</p>"
+	}	
+</script>
+</head>
+{%endblock%}
+<head>
+		<title>智能物联平台</title>
+</head>
+
+<body>
+
+{%if alert_content%}
+	<script>
+		window.alert("{{ alert_content }}");
+	</script>
+{%endif%}
+
+{%block mheader%}
+
+<div class="parent">
+	<div class="title">
+	智能物联平台
+	</div>
+	{%if not name%}
+	<div class="login">
+	<form action="/" method="post">
+	用户名:<input name="user"> 
+	密码:<input name="key" type="password">
+	<input type="submit" value="登陆" class="loginbutton">
+	</form>
+	</div>
+	{%else%}
+	<div class="logout">
+		用户:{{name}}
+		<button onclick="logout()" class = "logoutbutton">登出</button>
+	</div>
+	{%endif%}
+	<horrizenNav>
+			
+				<ul>
+					<li><a href="/">主页</a></li>
+					<li><a href="/home">智能家居</a></li>
+					<li><a href="/dog">机械狗</a></li>
+					<li><a href="/car">物联车</a></li>
+				</ul>
+			
+	</horrizenNav>
+</div>
+{%endblock%}
+
+{%block main%}
+<div id="main">
+		<verticalNav>
+			<ul>
+				<li><a onclick="info()">物联信息</a></li>
+				<li><a onclick="help()">帮助事项</a></li>
+				<li><a onclick="env()">开发环境</a></li>
+			</ul>
+		</verticalNav>
+		<div id="mainBar">
+			
+		</div>
+</div>
+{%endblock%}
+
+{%block bottom%}
+<div id="bottom">
+	<p class="down">
+@CopyRight made by THU.ee.chenym16</p>
+</div>
+{%endblock%}
+</body>
+
+</html>
